@@ -1,0 +1,15 @@
+[Unit]
+Description=Channel Post Bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+Type=simple
+WorkingDirectory=/root/channelpost_bot
+ExecStart=/root/channelpost_bot/env/bin/python3 /root/channelpost_bot/__main__.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
